@@ -1,16 +1,16 @@
 :root {
-    --primary-color: #2563EB;
-    --secondary-color: #1E293B;
-    --accent-color: #22C55E;
-    --background-color: #F8FAFC;
+    --primary-color: #0EA5E9;
+    --secondary-color: #6D28D9;
+    --accent-color: #22D3EE;
+    --background-color: #EFF6FF;
     --text-color: #0F172A;
     --white: #ffffff;
     --danger-color: #EF4444;
-    --success-color: #22C55E;
-    --border-color: #E2E8F0;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --success-color: #16A34A;
+    --border-color: #D1D5DB;
+    --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 6px 12px -2px rgba(15, 23, 42, 0.15), 0 4px 6px -2px rgba(15, 23, 42, 0.10);
+    --shadow-lg: 0 15px 35px -5px rgba(15, 23, 42, 0.2), 0 6px 20px -5px rgba(15, 23, 42, 0.12);
 }
 
 * {
@@ -22,7 +22,7 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: var(--background-color);
+    background: linear-gradient(145deg, #E0F2FE 0%, #EEF2FF 45%, #F5F3FF 100%);
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -37,14 +37,15 @@ body {
 
 /* Navbar */
 .navbar {
-    background: var(--white);
-    color: var(--text-color);
+    background: linear-gradient(95deg, rgba(14, 165, 233, 0.95), rgba(109, 40, 217, 0.95));
+    color: var(--white);
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-lg);
+    margin-bottom: 5px;
 }
 
 .navbar .container {
@@ -108,7 +109,7 @@ body {
 ================================ */
 
 .hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.92) 0%, rgba(109, 40, 217, 0.94) 100%);
     color: var(--white);
     padding: 6rem 1rem;
     text-align: center;
@@ -117,6 +118,16 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: var(--shadow-lg);
+}
+
+.hero h1 {
+    background: linear-gradient(120deg, #A78BFA, #22D3EE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: rgba(255,255,255,0.95);
 }
 
 /* important so content stays above animation */
@@ -161,10 +172,8 @@ body {
     opacity: 0.95;
 }
 
-/* ===============================
-   Buttons
-================================ */
 
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
@@ -182,92 +191,48 @@ body {
     transform: scale(0.97);
 }
 
-/* primary button */
-
 .btn-primary {
-    background: var(--primary-color);
+    background: linear-gradient(95deg, #0EA5E9, #6D28D9);
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background: #1D4ED8;
+    background: linear-gradient(95deg, #0284C7, #5B21B6);
     box-shadow: var(--shadow-md);
     transform: translateY(-3px);
 }
 
-/* danger button */
+.btn-secondary {
+    background: linear-gradient(95deg, #22D3EE, #0EA5E9);
+    color: #0F172A;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(95deg, #67E8F9, #38BDF8);
+}
 
 .btn-danger {
-    background: var(--danger-color);
+    background: linear-gradient(95deg, #EF4444, #DC2626);
     color: var(--white);
 }
 
 .btn-danger:hover {
-    background: #DC2626;
+    background: linear-gradient(95deg, #DC2626, #B91C1C);
     box-shadow: var(--shadow-md);
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
-/* logout button */
-
 .btn-logout {
-    background: transparent;
-    color: var(--danger-color);
-    border: 1px solid var(--danger-color);
+    background: rgba(239, 68, 68, 0.08);
+    color: #B91C1C;
+    border: 1px solid rgba(239, 68, 68, 0.4);
     box-shadow: none;
 }
 
 .btn-logout:hover {
-    background: var(--danger-color);
-    color: var(--white);
-    box-shadow: var(--shadow-sm);
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.8rem 1.8rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.btn-primary {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background: #1D4ED8;
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.btn-danger {
-    background: var(--danger-color);
-    color: var(--white);
-}
-
-.btn-danger:hover {
     background: #DC2626;
-    box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
-}
-
-.btn-logout {
-    background: transparent;
-    color: var(--danger-color);
-    border: 1px solid var(--danger-color);
-    box-shadow: none;
+    color: var(--white);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-logout:hover {
@@ -302,13 +267,17 @@ body {
 
 /* Cards */
 .card {
-    background: var(--white);
+    background: linear-gradient(130deg, #ffffff 0%, #EFF6FF 60%, #F8FAFC 100%);
     padding: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(14, 165, 233, 0.5);
 }
 
 .card:hover {

@@ -57,3 +57,12 @@ app/Models — Models
 app/Http/Controllers — Controllers
 resources/views — Frontend pages
 routes/web.php — Routes
+
+Screenshots:
+
+![Home](/screenshot/Home.png)
+![Admin Dashboard](/screenshot/admin_dashboard.png)
+![Employer Dashboard](/screenshot/employer_dashboard.png)
+![Employer Create Job](/screenshot/employer_jobs_create.png)
+![Seeker Dashboard](/screenshot/seeker_dashboard.png)
+
